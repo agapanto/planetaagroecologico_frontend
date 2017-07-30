@@ -8,9 +8,6 @@
       </div>
     </nav>
 
-    <div class="container">
-      <img src="./assets/planetaagroecologico_logo.png">
-    </div>
     <router-view id="main"></router-view>
   </div>
 </template>

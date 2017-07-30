@@ -1,7 +1,15 @@
 <template>
   <div class="hello container">
-    <h3>{{ hero.title }}</h3>
-    <h4>{{ hero.subtitle }}</h4>
+    <img src="../assets/planetaagroecologico_logo.png">
+    <br>
+    <br>
+    <h4>
+      {{ hero.title }}
+      <br>
+      <small>
+        {{ hero.subtitle }}
+      </small>
+    </h4>
     <button class="button button-primary">
       Registrarme
     </button>
@@ -15,7 +23,7 @@ export default {
     return {
       hero: {
         title: 'Registrate ahora como productor',
-        subtitle: 'Y te avisaremos cuando puedas empezar a vender'
+        subtitle: 'Y te avisaremos cuando puedas comenzar a vender'
       }
     }
   }
