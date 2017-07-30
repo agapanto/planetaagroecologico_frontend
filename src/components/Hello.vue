@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello container">
     <h3>{{ hero.title }}</h3>
     <h4>{{ hero.subtitle }}</h4>
   </div>
