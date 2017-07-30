@@ -2,6 +2,9 @@
   <div class="hello container">
     <h3>{{ hero.title }}</h3>
     <h4>{{ hero.subtitle }}</h4>
+    <button class="button button-primary">
+      Registrarme
+    </button>
   </div>
 </template>
 
@@ -21,4 +24,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello{
+  text-align: center;
+}
 </style>
