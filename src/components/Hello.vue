@@ -1,5 +1,5 @@
 <template>
-  <div class="hello container">
+  <div class="hello ui container">
     <img src="../assets/planetaagroecologico_logo.png">
     <br>
     <br>
@@ -10,7 +10,7 @@
         {{ hero.subtitle }}
       </small>
     </h4>
-    <button class="button button-primary">
+    <button class="ui primary button">
       Registrarme
     </button>
   </div>
@@ -32,7 +32,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
-  text-align: center;
-}
 </style>
