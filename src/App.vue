@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="container">
-        <a href="#">
-          Iniciar sesión
-        </a>
+    <div class="ui menu">
+      <div class="header item">
+        Planeta Agroecológico
       </div>
-    </nav>
+      <a class=" item">
+        Nuestra misión
+      </a>
+      <a class="item">
+        Tienda
+      </a>
+      <a class="item">
+        Sucursales
+      </a>
+      <a class="item">
+        Acerca de
+      </a>
+
+    </div>
 
     <router-view id="main"></router-view>
   </div>
