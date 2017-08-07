@@ -1,20 +1,20 @@
 {
-	"base": "",
+	"base": "static/semantic-ui/",
 	"version": "2.2.13",
 	"paths": {
 		"source": {
-			"config": "static/semantic_ui/src/theme.config",
-			"definitions": "static/semantic_ui/src/definitions/",
-			"site": "static/semantic_ui/src/site/",
-			"themes": "static/semantic_ui/src/themes/"
+			"config": "src/theme.config",
+			"definitions": "src/definitions/",
+			"site": "src/site/",
+			"themes": "src/themes/"
 		},
 		"output": {
-			"packaged": "static/semantic_ui/dist/",
-			"uncompressed": "static/semantic_ui/dist/components/",
-			"compressed": "static/semantic_ui/dist/components/",
-			"themes": "static/semantic_ui/dist/themes/"
+			"packaged": "dist/",
+			"uncompressed": "dist/components/",
+			"compressed": "dist/components/",
+			"themes": "dist/themes/"
 		},
-		"clean": "static/semantic_ui/dist/"
+		"clean": "dist/"
 	},
 	"permission": false,
 	"rtl": false,
