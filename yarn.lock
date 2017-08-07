@@ -5157,10 +5157,6 @@ selenium-server@^3.0.1:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/selenium-server/-/selenium-server-3.4.0.tgz#f9303656d956c8d6c856e4942167e0dec97fa7a8"
 
-semantic-ui-vue2@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/semantic-ui-vue2/-/semantic-ui-vue2-2.4.2.tgz#c825d9ed3fbccfd8d5f5efda7579c17ce70e414a"
-
 "semver@2 || 3 || 4 || 5", semver@^5.3.0:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
