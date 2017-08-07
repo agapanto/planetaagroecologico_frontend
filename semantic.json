@@ -3,18 +3,18 @@
 	"version": "2.2.13",
 	"paths": {
 		"source": {
-			"config": "src/theme.config",
-			"definitions": "src/definitions/",
-			"site": "src/site/",
-			"themes": "src/themes/"
+			"config": "static/semantic_ui/src/theme.config",
+			"definitions": "static/semantic_ui/src/definitions/",
+			"site": "static/semantic_ui/src/site/",
+			"themes": "static/semantic_ui/src/themes/"
 		},
 		"output": {
-			"packaged": "dist/",
-			"uncompressed": "dist/components/",
-			"compressed": "dist/components/",
-			"themes": "dist/themes/"
+			"packaged": "static/semantic_ui/dist/",
+			"uncompressed": "static/semantic_ui/dist/components/",
+			"compressed": "static/semantic_ui/dist/components/",
+			"themes": "static/semantic_ui/dist/themes/"
 		},
-		"clean": "dist/"
+		"clean": "static/semantic_ui/dist/"
 	},
 	"permission": false,
 	"rtl": false,
