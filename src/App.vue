@@ -1,22 +1,33 @@
 <template>
   <div id="app">
     <div class="ui menu">
-      <div class="header item">
-        Planeta Agroecológico
+      <div class="ui container">
+        <a class="active item">
+          Inicio
+        </a>
+        <a class="item">
+          Ofertas
+        </a>
+        <a class="item">
+          Historias
+        </a>
+        <div class="right menu">
+          <div class="ui dropdown item">
+            Ayuda <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item">Quienes somos</a>
+              <a class="item">Como comprar</a>
+              <a class="item">Como vender</a>
+            </div>
+          </div>
+          <a class="item">
+            Iniciar sesión
+          </a>
+          <div class="item">
+            <div class="ui primary button">Regístrate</div>
+          </div>
+        </div>
       </div>
-      <a class=" item">
-        Nuestra misión
-      </a>
-      <a class="item">
-        Tienda
-      </a>
-      <a class="item">
-        Sucursales
-      </a>
-      <a class="item">
-        Acerca de
-      </a>
-
     </div>
 
     <router-view id="main"></router-view>
