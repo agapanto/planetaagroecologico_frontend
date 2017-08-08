@@ -2,24 +2,24 @@
   <div class="ui container">
 
     <div class="ui secondary  menu">
+      <a class="item">
+        Resumen
+      </a>
       <a class="active item">
-        Home
+        Productores
       </a>
       <a class="item">
-        Messages
-      </a>
-      <a class="item">
-        Friends
+        Productos
       </a>
       <div class="right menu">
         <div class="item">
           <div class="ui icon input">
-            <input placeholder="Search..." type="text">
+            <input placeholder="Buscar..." type="text">
             <i class="search link icon"></i>
           </div>
         </div>
         <a class="ui item">
-          Logout
+          Cerrar sesión
         </a>
       </div>
     </div>
@@ -38,19 +38,25 @@
 
     <table class="ui black table">
       <thead>
-        <tr><th>Food</th>
-        <th>Calories</th>
-        <th>Protein</th>
-      </tr></thead><tbody>
         <tr>
-          <td>Apples</td>
-          <td>200</td>
-          <td>0g</td>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Productos</th>
+          <th>Región</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Productos doña juana</td>
+          <td>Sociedad limitada</td>
+          <td>10</td>
+          <td>5ª</td>
         </tr>
         <tr>
-          <td>Orange</td>
-          <td>310</td>
-          <td>0g</td>
+          <td>Productos doña juana</td>
+          <td>Cooperativa</td>
+          <td>30</td>
+          <td>Metropolitana</td>
         </tr>
       </tbody>
     </table>
