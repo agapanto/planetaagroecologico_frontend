@@ -31,7 +31,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Hind', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
