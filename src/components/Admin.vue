@@ -27,7 +27,7 @@
     <div class="ui form">
       <div class="required field">
         <label>Archivo csv planetaagroecológico</label>
-        <input type="file">
+        <input type="file" id="csv_file" accept=".csv" v-on:change="handleFileUpload" />
       </div>
     </div>
 
@@ -63,6 +63,11 @@ export default {
   name: 'admin',
   data () {
     return {
+    }
+  },
+  methods: {
+    handleFileUpload: function (event) {
+      console.log(event.target.files[0])
     }
   }
 }
