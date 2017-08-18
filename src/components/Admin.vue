@@ -59,15 +59,32 @@
 </template>
 
 <script>
+var Papa = require('../../static/papaparse/papaparse.min')
+var jQuery = require('jquery')
+var $ = jQuery
+
 export default {
   name: 'admin',
   data () {
     return {
     }
   },
+  mounted () {
+    $(document).ready(function () {
+      window.csvtojson = function (file) {
+        Papa.parse(file, {
+          header: true,
+          complete: function (results) {
+            console.log('Finished:', results.data)
+          }
+        })
+      }
+    })
+  },
   methods: {
     handleFileUpload: function (event) {
-      console.log(event.target.files[0])
+      var file = event.target.files[0]
+      window.csvtojson(file)
     }
   }
 }
