@@ -9,17 +9,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Productos doña juana</td>
-        <td>Sociedad limitada</td>
-        <td>10</td>
-        <td>5ª</td>
-      </tr>
-      <tr>
-        <td>Productos doña juana</td>
-        <td>Cooperativa</td>
-        <td>30</td>
-        <td>Metropolitana</td>
+      <tr v-for="producer in producers_resume">
+        <td>{{ producer.name }}</td>
+        <td>{{ producer.type }}</td>
+        <td>{{ producer.products_number }}</td>
+        <td>{{ producer.region }}</td>
       </tr>
     </tbody>
   </table>
@@ -30,6 +24,20 @@ export default {
   name: 'admin-producers-table',
   data () {
     return {
+      producers_resume: [
+        {
+          name: 'Productos doña juana',
+          type: 'Sociedad limitada',
+          products_number: '10',
+          region: '5'
+        },
+        {
+          name: 'Productos doña juana',
+          type: 'Cooperativa',
+          products_number: '30',
+          region: 'Metropolitana'
+        }
+      ]
     }
   },
   methods: {
