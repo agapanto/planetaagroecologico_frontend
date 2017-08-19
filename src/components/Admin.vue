@@ -26,35 +26,14 @@
 
     <admin-file-uploader></admin-file-uploader>
 
-    <table class="ui black table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Tipo</th>
-          <th>Productos</th>
-          <th>Región</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Productos doña juana</td>
-          <td>Sociedad limitada</td>
-          <td>10</td>
-          <td>5ª</td>
-        </tr>
-        <tr>
-          <td>Productos doña juana</td>
-          <td>Cooperativa</td>
-          <td>30</td>
-          <td>Metropolitana</td>
-        </tr>
-      </tbody>
-    </table>
+    <admin-producers-table></admin-producers-table>
+
   </div>
 </template>
 
 <script>
 import AdminFileUploader from './admin/AdminFileUploader'
+import AdminProducersTable from './admin/AdminProducersTable'
 
 export default {
   name: 'admin',
@@ -65,7 +44,8 @@ export default {
   methods: {
   },
   components: {
-    'admin-file-uploader': AdminFileUploader
+    'admin-file-uploader': AdminFileUploader,
+    'admin-producers-table': AdminProducersTable
   }
 }
 </script>
