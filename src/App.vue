@@ -26,6 +26,7 @@
           <div class="item">
             <div class="ui primary button">Regístrate</div>
           </div>
+          
         </div>
       </div>
     </div>
