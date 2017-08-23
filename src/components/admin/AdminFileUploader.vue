@@ -12,6 +12,30 @@ var Papa = require('../../../static/papaparse/papaparse.min')
 var jQuery = require('jquery')
 var $ = jQuery
 
+// JS Data
+import { Mapper } from 'js-data'
+import { HttpAdapter } from 'js-data-http'
+
+// Instantiate the HttpAdapter
+const adapter = new HttpAdapter(
+  {
+    basePath: 'https://localhost:8000'
+  }
+)
+
+const commentService = new Mapper(
+  {
+    name: 'comment',
+    endpoint: 'comments', // name in plurar by default
+    type: 'object',
+    properties: {
+      id: { type: 'number' },
+      name: { type: 'string' }
+    }
+  }
+)
+commentService.registerAdapter('http', adapter, { 'default': true })
+
 export default {
   name: 'admin-file-uploader',
   data () {
