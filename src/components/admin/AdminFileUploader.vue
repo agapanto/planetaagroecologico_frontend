@@ -38,10 +38,18 @@ store.defineMapper(
   }
 )
 
+store.defineMapper(
+  'products_import',
+  {
+    endpoint: 'products_import', // name in plurar by default
+    type: 'object'
+  }
+)
+
 // GET /producer/
-store.findAll('producer').then((producer) => {
-  console.log('producer')
-})
+// store.findAll('producer').then((producer) => {
+//   console.log('producer')
+// })
 
 export default {
   name: 'admin-file-uploader',
@@ -56,6 +64,10 @@ export default {
           header: true,
           complete: function (results) {
             console.log('Finished:', results.data)
+            store.create(
+              'products_import',
+              results.data
+            )
           }
         })
       }
