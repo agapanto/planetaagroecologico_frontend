@@ -13,20 +13,23 @@ var jQuery = require('jquery')
 var $ = jQuery
 
 // JS Data
-import { Mapper } from 'js-data'
+import { DataStore } from 'js-data'
 import { HttpAdapter } from 'js-data-http'
 
-// Instantiate the HttpAdapter
-const adapter = new HttpAdapter(
+const httpAdapter = new HttpAdapter(
   {
-    basePath: 'https://localhost:8000'
+    basePath: 'http://localhost:8000/api',
+    forceTrailingSlash: true
   }
 )
+const store = new DataStore()
 
-const commentService = new Mapper(
+store.registerAdapter('http', httpAdapter, { 'default': true })
+
+store.defineMapper(
+  'producer',
   {
-    name: 'comment',
-    endpoint: 'comments', // name in plurar by default
+    endpoint: 'producers', // name in plurar by default
     type: 'object',
     properties: {
       id: { type: 'number' },
@@ -34,7 +37,11 @@ const commentService = new Mapper(
     }
   }
 )
-commentService.registerAdapter('http', adapter, { 'default': true })
+
+// GET /producer/
+store.findAll('producer').then((producer) => {
+  console.log('producer')
+})
 
 export default {
   name: 'admin-file-uploader',
