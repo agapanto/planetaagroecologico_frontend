@@ -66,7 +66,9 @@ export default {
             console.log('Finished:', results.data)
             store.create(
               'products_import',
-              results.data
+              {
+                'data': results.data
+              }
             )
           }
         })
