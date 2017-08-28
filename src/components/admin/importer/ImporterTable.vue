@@ -11,19 +11,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="row in data">
-        <td>{{ row.TIPO }}</td>
-        <td>{{ row.PRODUCTO }}</td>
-        <td>{{ row.PRODUCTOR }}</td>
-        <td>{{ row.UNIDAD }}</td>
-        <td>{{ row.PRECIO }}</td>
-        <td>{{ row.OBSERVACIONES }}</td>
-      </tr>
+      <importer-table-row v-bind:row="row" v-for="row in data"></importer-table-row>
     </tbody>
   </table>
 </template>
 
 <script>
+import ImporterTableRow from './ImporterTableRow'
+
 export default {
   name: 'admin-producers-table',
   props: {
@@ -36,6 +31,9 @@ export default {
     }
   },
   methods: {
+  },
+  components: {
+    'importer-table-row': ImporterTableRow
   }
 }
 </script>
