@@ -56,12 +56,13 @@ export default {
     }
   },
   mounted () {
+    var vm = this
     $(document).ready(function () {
       window.csvtojson = function (file) {
         Papa.parse(file, {
           header: true,
           complete: function (results) {
-            window.data = results.data
+            vm.$emit('data-loaded', results.data)
           }
         })
       }
@@ -71,7 +72,6 @@ export default {
     handleFileUpload: function (event) {
       var file = event.target.files[0]
       window.csvtojson(file)
-      this.$emit('data-loaded', window.data)
     }
   }
 }

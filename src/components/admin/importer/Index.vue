@@ -12,7 +12,7 @@
 
     <file-uploader v-on:data-loaded="fillTable"></file-uploader>
 
-    <importer-table v-bind:data="data"></importer-table>
+    <importer-table v-bind:data="import_data"></importer-table>
 
   </div>
 </template>
@@ -26,12 +26,12 @@ export default {
   name: 'admin_importer',
   data () {
     return {
-      data: []
+      import_data: []
     }
   },
   methods: {
     fillTable (value) {
-      this.data = value
+      this.import_data = value
     }
   },
   components: {

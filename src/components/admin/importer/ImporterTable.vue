@@ -26,7 +26,11 @@
 <script>
 export default {
   name: 'admin-producers-table',
-  props: ['data'],
+  props: {
+    data: {
+      default: function () { return [] }
+    }
+  },
   data () {
     return {
     }

@@ -16,6 +16,7 @@ export default {
   name: 'admin',
   data () {
     return {
+      data: []
     }
   },
   methods: {
