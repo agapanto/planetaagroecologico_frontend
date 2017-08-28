@@ -8,7 +8,7 @@
 </template>
 
 <script>
-var Papa = require('../../../static/papaparse/papaparse.min')
+var Papa = require('../../../../static/papaparse/papaparse.min')
 var jQuery = require('jquery')
 var $ = jQuery
 
@@ -46,15 +46,13 @@ store.defineMapper(
   }
 )
 
-// GET /producer/
-// store.findAll('producer').then((producer) => {
-//   console.log('producer')
-// })
-
 export default {
   name: 'admin-file-uploader',
+  props: {
+  },
   data () {
     return {
+      data: []
     }
   },
   mounted () {
@@ -63,13 +61,7 @@ export default {
         Papa.parse(file, {
           header: true,
           complete: function (results) {
-            console.log('Finished:', results.data)
-            store.create(
-              'products_import',
-              {
-                'data': results.data
-              }
-            )
+            window.data = results.data
           }
         })
       }
@@ -79,6 +71,7 @@ export default {
     handleFileUpload: function (event) {
       var file = event.target.files[0]
       window.csvtojson(file)
+      this.$emit('data-loaded', window.data)
     }
   }
 }

@@ -1,14 +1,10 @@
 <template>
   <div class="ui secondary  menu">
-    <a class="item">
-      Resumen
+
+    <a class="item" href="#/admin/importer">
+      Importador csv
     </a>
-    <a class="active item">
-      Productores
-    </a>
-    <a class="item">
-      Productos
-    </a>
+
     <div class="right menu">
       <div class="item">
         <div class="ui icon input">
