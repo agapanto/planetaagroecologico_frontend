@@ -12,40 +12,6 @@ var Papa = require('../../../../static/papaparse/papaparse.min')
 var jQuery = require('jquery')
 var $ = jQuery
 
-// JS Data
-import { DataStore } from 'js-data'
-import { HttpAdapter } from 'js-data-http'
-
-const httpAdapter = new HttpAdapter(
-  {
-    basePath: 'http://localhost:8000/api',
-    forceTrailingSlash: true
-  }
-)
-const store = new DataStore()
-
-store.registerAdapter('http', httpAdapter, { 'default': true })
-
-store.defineMapper(
-  'producer',
-  {
-    endpoint: 'producers', // name in plurar by default
-    type: 'object',
-    properties: {
-      id: { type: 'number' },
-      name: { type: 'string' }
-    }
-  }
-)
-
-store.defineMapper(
-  'products_import',
-  {
-    endpoint: 'products_import', // name in plurar by default
-    type: 'object'
-  }
-)
-
 export default {
   name: 'admin-file-uploader',
   props: {
