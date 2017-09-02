@@ -14,6 +14,8 @@
 
     <importer-table v-bind:data="import_data"></importer-table>
 
+    <button class="ui primary button" v-bind:class="{ disabled: isEmpty }" @click="uploadData">confirmar importación</button>
+
   </div>
 </template>
 
@@ -32,6 +34,14 @@ export default {
   methods: {
     fillTable (value) {
       this.import_data = value
+    },
+    uploadData () {
+      alert(this.import_data)
+    }
+  },
+  computed: {
+    isEmpty: function () {
+      return this.import_data.length === 0
     }
   },
   components: {
