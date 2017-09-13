@@ -27,6 +27,7 @@ export default {
       window.csvtojson = function (file) {
         Papa.parse(file, {
           header: true,
+          skipEmptyLines: true,
           complete: function (results) {
             vm.$emit('data-loaded', results.data)
           }
