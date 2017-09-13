@@ -39,6 +39,12 @@ export default {
         row = data[index]
         for (var attribute in row) {
           row[attribute] = row[attribute].trim()
+          if (attribute === 'UNIDAD') {
+            row[attribute] = row[attribute].toLowerCase()
+            if (row[attribute] === 'kilo') {
+              row[attribute] = 'kg'
+            }
+          }
           if (attribute === 'PRECIO') {
             row[attribute] = row[attribute].replace('$', '')
             row[attribute] = row[attribute].replace('.', '')
