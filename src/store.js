@@ -14,6 +14,18 @@ const store = new DataStore()
 store.registerAdapter('http', httpAdapter, { 'default': true })
 
 store.defineMapper(
+  'producer',
+  {
+    endpoint: 'producers', // name in plurar by default
+    type: 'object',
+    properties: {
+      id: { type: 'number' },
+      name: { type: 'string' }
+    }
+  }
+)
+
+store.defineMapper(
   'products_import',
   {
     endpoint: 'products_import', // name in plurar by default
@@ -27,6 +39,8 @@ export default new Vuex.Store({
   state: {
     // this.$state.store
     store: store
+  },
+  getters: {
   },
   mutations: {
     increment (state) {
