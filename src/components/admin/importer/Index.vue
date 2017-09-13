@@ -23,6 +23,7 @@
 import AdminMenu from '../../admin/AdminMenu'
 import FileUploader from './FileUploader'
 import ImporterTable from './ImporterTable'
+import store from '../../../store'
 
 export default {
   name: 'admin_importer',
@@ -32,8 +33,22 @@ export default {
     }
   },
   methods: {
-    fillTable (value) {
-      this.import_data = value
+    cleanData (data) {
+      var row = null
+      for (var index in data) {
+        row = data[index]
+        for (var attribute in row) {
+          row[attribute] = row[attribute].trim()
+          if (attribute === 'PRECIO') {
+            row[attribute] = row[attribute].replace('$', '')
+            row[attribute] = row[attribute].replace('.', '')
+          }
+        }
+      }
+      return data
+    },
+    fillTable (data) {
+      this.import_data = this.cleanData(data)
     },
     uploadData () {
       alert(this.import_data)
