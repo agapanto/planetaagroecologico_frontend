@@ -1,21 +1,47 @@
 <template>
   <div class="hello">
-    <div class="ui raised very padded text container segment">
-      <!-- <img class="ui center aligned" src="../assets/planetaagroecologico_logo.png"> -->
-      <h2>
+    <div class="ui  container">
+      <h1>
         {{ hero.title }}
-        <br>
-        <small>
-          {{ hero.subtitle }}
-        </small>
-      </h2>
+      </h1>
+      <p>
+        {{ hero.subtitle }}
+      </p>
+
       <button class="ui primary button">
         Registrarme
       </button>
     </div>
-    <div class="ui text container segment">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    <div class="ui container">
+      <div class="ui four stackable cards">
+        <div class="card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <div class="ui inverted button">Add Friend</div>
+                </div>
+              </div>
+            </div>
+            <img src="https://scontent.fscl8-1.fna.fbcdn.net/v/t31.0-8/10680003_10152531931618978_8479690788427191614_o.jpg?oh=bb1dcd223eccc3248518470cd17fa306&oe=5A5BE51A">
+          </div>
+          <div class="content">
+            <a class="header">Tierra Viva</a>
+            <div class="meta">
+              <span class="date">desde junio de 2017</span>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="shopping bag icon"></i>
+              10 productos a la venta
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </template>
 
