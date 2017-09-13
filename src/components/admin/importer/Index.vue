@@ -57,7 +57,8 @@ export default {
       this.import_data = this.cleanData(data)
     },
     uploadData () {
-      alert(this.import_data)
+      var dataImport = store.state.store.create('products_import', {'data': this.import_data})
+      console.log(dataImport)
     }
   },
   computed: {
