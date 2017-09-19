@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Admin from '@/components/Admin'
 import AdminImporter from '@/components/admin/importer/Index'
+import Producers from '@/components/admin/producers/Index'
 import Hello from '@/components/Hello'
 import Login from '@/components/Login'
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/admin',
       name: 'Admin',
       component: Admin
+    },
+    {
+      path: '/admin/producers',
+      name: 'Producers',
+      component: Producers
     },
     {
       path: '/admin/importer',
