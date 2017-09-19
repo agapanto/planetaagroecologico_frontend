@@ -1,20 +1,25 @@
 <template>
-  <div class="ui secondary  menu">
+  <div class="ui pointing menu">
 
     <a class="item" href="#/admin/importer">
+      Productos
+    </a>
+    <a class="item" href="#/admin/importer">
+      Categorias
+    </a>
+    <a class="item" href="#/admin/importer">
+      Productores
+    </a>
+    <a class="active item" href="#/admin/importer">
       Importador csv
     </a>
-
     <div class="right menu">
       <div class="item">
-        <div class="ui icon input">
-          <input placeholder="Buscar..." type="text">
+        <div class="ui transparent icon input">
+          <input placeholder="Filtrar..." type="text">
           <i class="search link icon"></i>
         </div>
       </div>
-      <a class="ui item">
-        Cerrar sesión
-      </a>
     </div>
   </div>
 </template>
