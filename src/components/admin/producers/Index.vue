@@ -11,27 +11,28 @@
 <script>
 import AdminMenu from '../../admin/AdminMenu'
 import ProducerTable from './ProducerTable'
-// import store from '../../../store'
+import store from '../../../store'
 
 export default {
-  name: 'admin_importer',
+  name: 'admin_producers',
   data () {
     return {
-      import_data: []
+      producers: []
     }
   },
   methods: {
   },
   computed: {
-    producers: function () {
-      return [
-        {
-          'name': 'asd',
-          'description': 'asd',
-          'status': 'active'
-        }
-      ]
-    }
+
+  },
+  mounted: function () {
+    const ctrl = this
+    var data = store.state.store.findAll('producer')
+    data.then(
+      function (result) {
+        ctrl.producers = result
+      }
+    )
   },
   components: {
     'admin-menu': AdminMenu,

@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <producer-table-row v-bind:producer="producer" v-for="producer in producers"></producer-table-row>
+      <producer-table-row v-bind:producer="producer" v-for="producer in producers" :key="producer.id"></producer-table-row>
     </tbody>
   </table>
 </template>
