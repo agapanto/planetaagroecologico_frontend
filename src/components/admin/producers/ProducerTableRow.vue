@@ -2,6 +2,7 @@
   <tr>
     <td>{{producer.name}}</td>
     <td>{{producer.description}}</td>
+    <td>{{producer.producer_type}}</td>
     <td>{{producer.status}}</td>
   </tr>
 </template>

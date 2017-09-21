@@ -4,6 +4,7 @@
       <tr>
         <th class="sorted ascending">Nombre</th>
         <th class="">Descripción</th>
+        <th class="">Tipo</th>
         <th class="">Estado</th>
       </tr>
     </thead>
